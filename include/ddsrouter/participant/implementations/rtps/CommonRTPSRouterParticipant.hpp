@@ -75,6 +75,10 @@ protected:
     std::shared_ptr<IReader> create_reader_(
             RealTopic topic) override;
 
+    template<class DiscoveryInfoKind>
+    Endpoint create_endpoint_from_info_(
+            DiscoveryInfoKind& info);
+
     /////
     // RTPS specific methods
 
